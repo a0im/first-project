@@ -1,0 +1,104 @@
+
+:root{
+    --text-color: white;
+    --icon-color: orange;
+    --background-color:#01A1F7;
+}
+
+body{
+    margin: 0;
+    font-family:'Source Sans Pro';
+
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-color);
+    padding: 5px 13px;
+}
+
+.logo{
+    font-size: 20px;
+    
+    
+}
+.logo i{
+    color: var(--icon-color);
+}
+
+
+.menu{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding: 0px;
+}
+.menu il:hover {
+    background-color: var(--icon-color);
+    border-radius: 4px;
+}
+/* mazin을 넣으면 클릭범위 작음 padding 선호 */
+.menu il{
+    padding: 8px 15px;
+}
+
+.icon{
+    color: var(--icon-color);
+    display: flex;
+    list-style: none;
+    padding:0px;
+}
+.icon li{
+    padding: 5px 3px;
+}
+.button{
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 20px;
+    color: var(--icon-color);
+}
+
+@media screen and (max-width: 768px){
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 13px;
+    }
+    .logo{   
+    }
+    .menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .menu il{
+        width: 100%;
+        text-align: center;
+    }
+    .icon{
+        display: none;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+    }
+    .button{
+        display: block;
+    }
+
+    .menu.active,
+    .icons.active{
+        display: flex;
+    }
+
+    }
+
+
